@@ -13,6 +13,7 @@
     <div id="app">
         <div class="background">
             <div class="container-app">
+                <!-- LISTA CONTATTI CHAT  -->
                 <div class="col-30">
                     <div class="header-col-30">
                         <div>
@@ -47,10 +48,16 @@
                     <div class="input">
                         <input type="text" placeholder="Cerca o inizia una nuova chat">
                     </div>
-                    <div>
-    
-                    </div>
+
+                    <ul>
+                        <li v-for="(item,index) in contacts" class="chat-item-list">
+                           <div class="chat-section">
+                            <img :src="getImageUser" alt="">
+                           </div>
+                        </li>
+                    </ul>
                 </div>
+                <!-- FINE LISTA CONTATTI CHAT  -->
                 <div class="col-70">
                     <div class="main-chat">
                         <div class="header-col-70">
