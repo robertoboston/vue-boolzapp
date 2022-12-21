@@ -28,7 +28,7 @@ body{
 .col-30{
     width: 30%;
     height: 100%;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
 }
 
 .col-70{
@@ -100,4 +100,50 @@ body{
     background-color: white;
     padding: 5px
     
+}
+
+.user-img{
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.user-img img{
+    height: 60px;
+    border-radius: 30px;
+    margin-right: 5px;
+
+}
+
+.icons-space i{
+    padding: 0 10px;
+}
+
+.main-chat{
+    height: 100%;
+    background-image: url(../assets/mine.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.input-chat{
+    height: 60px;
+    background-color: rgb(199, 188, 188);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+
+.input-chat input{
+    height: 90%;
+    width: 70%;
+    border-radius: 5px;
+    border-style: none;
+}
+
+.icon-footer{
+    font-size: 30px;
+    color: rgb(104, 98, 98);
 }

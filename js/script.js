@@ -1,8 +1,8 @@
 const  {
-    creteApp
+    createApp
 } = Vue;
 
-creteApp({
+createApp({
     data(){
         return{
             contacts: [
@@ -167,8 +167,8 @@ creteApp({
                     }
                 ],
                 }
-                ]
+            ]
 
         }
     }
-}),mount('#app')
+}).mount('#app')
