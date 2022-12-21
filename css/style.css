@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.background{
+    width: 100vw;
+    height: 100vh;
+    background: rgb(29,163,8);
+    background: linear-gradient(180deg, rgba(29,163,8,1) 10%, rgba(218,218,218,1) 10%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-app{
+    background-color: black;
+    width: 1800px;
+    height: 900px;
+}
