@@ -124,9 +124,8 @@ body{
 .main-chat{
     height: 100%;
     background-image: url(../assets/mine.jpg);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    position: relative;
+    
 }
 
 .input-chat{
@@ -136,6 +135,9 @@ body{
     justify-content: space-around;
     align-items: center;
     padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 .input-chat input{
@@ -143,6 +145,7 @@ body{
     width: 70%;
     border-radius: 5px;
     border-style: none;
+
 }
 
 .icon-footer{
@@ -185,4 +188,38 @@ body{
 
 .chat-item-list:hover{
     background-color: rgb(211, 211, 211);
+}
+
+.green-msg{
+    float: right;
+}
+
+.white-msg{
+    float: left;
+    margin-top: 200px;
+}
+
+.message-send{
+    background-color: green;
+    width: 300px;
+    margin: 20px 30px;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+}
+
+.orario{
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+    font-size: 10px;
+}
+
+.message-receive{
+    background-color: white;
+    width: 300px;
+    margin: 20px 30px;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
 }
