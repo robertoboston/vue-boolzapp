@@ -5,7 +5,8 @@ const  {
 createApp({
     data(){
         return{
-            message : 'ciao',
+            contatore : 0,
+            indexActive : 0,
             contacts: [
                 {
                 name: 'Michele',

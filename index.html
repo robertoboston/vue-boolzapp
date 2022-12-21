@@ -82,14 +82,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="chat-messages">
+                        <div class="chat-messages" v-for="(messages, index) in contacts[indexActive].messages">
                             <div class="green-msg">
                                 <div class="message-send">
                                     hai portato a spasso il cane?
-                                    <span class="orario">15:30</span>
-                                </div>
-                                <div class="message-send">
-                                    ricordati di stendere i panni
                                     <span class="orario">15:30</span>
                                 </div>
                             </div>
