@@ -5,6 +5,7 @@ const  {
 createApp({
     data(){
         return{
+            message : 'ciao',
             contacts: [
                 {
                 name: 'Michele',
@@ -170,5 +171,13 @@ createApp({
             ]
 
         }
+    },
+    methods : {
+        getImageUser(){
+
+            return './assets/' + this.contacts[index].avatar + 'jpg'
+        }
+        
+
     }
 }).mount('#app')
