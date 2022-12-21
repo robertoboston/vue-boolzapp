@@ -49,10 +49,10 @@
                         <input type="text" placeholder="Cerca o inizia una nuova chat">
                     </div>
 
-                    <ul>
+                    <ul class="chat-list">
                         <li v-for="(item,index) in contacts" class="chat-item-list">
-                           <div class="chat-section">
-                            <img :src="getImageUser" alt="">
+                           <div class="chat-list-image">
+                            <img :src="getImageUser(index)" alt="">
                            </div>
                         </li>
                     </ul>

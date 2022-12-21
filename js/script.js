@@ -173,7 +173,7 @@ createApp({
         }
     },
     methods : {
-        getImageUser(){
+        getImageUser(index){
 
             return './assets/' + this.contacts[index].avatar + 'jpg'
         }
