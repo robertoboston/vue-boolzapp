@@ -202,7 +202,9 @@ body{
     margin: 20px 30px;
     border-radius: 10px;
     padding: 20px;
-    position: relative;;
+    position: relative;
+    align-self: flex-end;
+
 }
 
 .orario{
@@ -218,12 +220,15 @@ body{
     margin: 20px 30px;
     border-radius: 10px;
     padding: 20px;
-    position: relative;
+    align-self: flex-start;
+
 }
 
 .chat-messages{
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+
 }
+
 

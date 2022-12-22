@@ -50,7 +50,8 @@
                     </div>
 
                     <ul class="chat-list">
-                        <li v-for="(item,index) in contacts" class="chat-item-list">
+                        <li v-for="(item,index) in contacts" class="chat-item-list"
+                        @click="getCurrentAvatar(currentIndex)">
                            <div class="chat-list-image">
                                 <img :src="getImageUser(index)" alt="">
                            </div>
@@ -83,16 +84,8 @@
                             </div>
                         </div>
                         <div class="chat-messages">
-                            <div class="green-msg" v-for="(messages,index) in contacts[indexActive].messages">
-                                <div class="message-send">
-                                    {{messages.message}}
-                                    <span class="orario">15:30</span>
-                                </div>
-                            </div>
-                            <div class="white-msg">
-                                <div class="message-receive">
-                                    ciao
-                                </div>
+                            <div v-for="(message,index) in contacts[indexActive].messages" :class="(contacts[activeItem].messages[index].status == 'sent') ? 'message-send' : 'message-receive'" >
+                                <p>{{message.message}}</p>
                             </div>
                         </div>
                         <div class="input-chat">

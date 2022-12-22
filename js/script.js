@@ -7,6 +7,8 @@ createApp({
         return{
             contatore : 0,
             indexActive : 0,
+            activeItem: 0,
+            
             contacts: [
                 {
                 name: 'Michele',
@@ -177,7 +179,14 @@ createApp({
         getImageUser(index){
 
             return './assets/avatar' + this.contacts[index].avatar + '.jpg'
-        }
+        },
+        getCurrentAvatar(currentIndex){
+            console.log(currentIndex)
+            this.indexActive = currentIndex;
+        },
+
+        
+            
         
 
     }
