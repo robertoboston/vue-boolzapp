@@ -51,7 +51,7 @@
 
                     <ul class="chat-list">
                         <li v-for="(item,index) in contacts" class="chat-item-list"
-                        @click="getCurrentAvatar(currentIndex)">
+                        @click="changeChat(index)">
                            <div class="chat-list-image">
                                 <img :src="getImageUser(index)" alt="">
                            </div>
@@ -69,7 +69,7 @@
                     <div class="main-chat">
                         <div class="header-col-70">
                             <div class="user-img">
-                                <img src="./assets/avatar_1.jpg" alt="">
+                                <img :src="getImageUser(contatore)" alt="">
                                 <div>
                                     <h3>Michele</h3>
                                     <span>ultimo accesso oggi alle 12:00</span>
@@ -84,7 +84,7 @@
                             </div>
                         </div>
                         <div class="chat-messages">
-                            <div v-for="(message,index) in contacts[indexActive].messages" :class="(contacts[activeItem].messages[index].status == 'sent') ? 'message-send' : 'message-receive'" >
+                            <div v-for="(message,index) in contacts[contatore].messages" :class="(contacts[contatore].messages[index].status == 'sent') ? 'message-send' : 'message-receive'" >
                                 <p>{{message.message}}</p>
                             </div>
                         </div>
@@ -92,7 +92,7 @@
                             <div class="icon-footer">
                                 <i class="fa-regular fa-face-smile"></i>
                             </div>
-                            <input type="text" name="" id="">
+                            <input v-model="newMessage" @keypress.enter="sendNewMessage(contatore)" type="text" name="" id="">
                             <div class="icon-footer">
                                 <i class="fa-solid fa-microphone"></i>
                             </div>

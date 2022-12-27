@@ -6,9 +6,8 @@ createApp({
     data(){
         return{
             contatore : 0,
-            indexActive : 0,
             activeItem: 0,
-            
+            newMessage : '',
             contacts: [
                 {
                 name: 'Michele',
@@ -180,14 +179,25 @@ createApp({
 
             return './assets/avatar' + this.contacts[index].avatar + '.jpg'
         },
-        getCurrentAvatar(currentIndex){
-            console.log(currentIndex)
-            this.indexActive = currentIndex;
+        changeChat(i){
+            this.contatore = i
         },
+        sendNewMessage(index){
+            newObject = {
+                message : this.newMessage,
+                status: 'sent'
+            },
+            this.contacts[index].messages.push(newObject)
+            this.newMessage = ''
+            setTimeout(() => {
+                responder = {
+                    message : 'ok',
+                    status : 'received'
+                }
+                this.contacts[index].messages.push(responder)
 
-        
-            
-        
-
+            },1000)
+        }
+      
     }
 }).mount('#app')
