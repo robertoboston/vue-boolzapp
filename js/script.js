@@ -8,6 +8,7 @@ createApp({
             contatore : 0,
             activeItem: 0,
             newMessage : '',
+            nameFilter : '',
             contacts: [
                 {
                 name: 'Michele',
@@ -197,6 +198,18 @@ createApp({
                 this.contacts[index].messages.push(responder)
 
             },1000)
+        },
+        filterList(){
+            this.contacts.forEach(element => {
+                if(element.name.tolowercase().includes(this.nameFilter.tolowercase())){
+                    element.visible = true
+                }
+                else{
+                    element.visible = false
+                }
+                
+            });
+
         }
       
     }
