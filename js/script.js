@@ -201,7 +201,7 @@ createApp({
         },
         filterList(){
             this.contacts.forEach(element => {
-                if(element.name.tolowercase().includes(this.nameFilter.tolowercase())){
+                if(element.name.toLowerCase().includes(this.nameFilter.toLowerCase())){
                     element.visible = true
                 }
                 else{
