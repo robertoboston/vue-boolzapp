@@ -50,15 +50,16 @@
                     </div>
 
                     <ul class="chat-list">
-                        <li v-for="(item,index) in contacts" class="chat-item-list"
-                        @click="changeChat(index)">
-                           <div class="chat-list-image">
-                                <img :src="getImageUser(index)" alt="">
-                           </div>
-                           <div>
-                                <h4 class="user-chat-name">{{item.name}}</h4>
-                                <span class="last-access">Ultimo messaggio inviato</span>
-                           </div>
+                        <li v-for="(item,index) in contacts" class="chat-item-list" @click="changeChat(index)">
+                            <div class="card-container" v-if="item.visible">
+                                <div class="chat-list-image">
+                                    <img :src="getImageUser(index)" alt="">
+                               </div>
+                               <div>
+                                    <h4 class="user-chat-name">{{item.name}}</h4>
+                                    <span class="last-access">Ultimo messaggio inviato</span>
+                               </div>
+                            </div>
                         </li>
                     </ul>
                 </div>

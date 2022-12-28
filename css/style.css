@@ -231,4 +231,12 @@ body{
 
 }
 
+.card-container{
+    display: flex;
+}
+
+.card-lista-active{
+    background-color: #e9ebeb;
+}
+
 
